@@ -1,0 +1,50 @@
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url(../images/header-bg-mobile.png);
+  background-position: right;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include onTablet {
+    background-image: url(../images/header-bg-tablet.png);
+  }
+
+  @include onLaptop {
+    background-image: url(../images/header-bg-laptop.png);
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 88px;
+
+    @include contentPaddingInline;
+
+    @include onTablet {
+      margin-bottom: 130px;
+    }
+    @include onLaptop {
+      margin-bottom: 204px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+
+    @include onTablet {
+      font-size: 64px;
+    }
+    @include onLaptop {
+      font-size: 80px;
+    }
+  }
+}

@@ -1,7 +1,16 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "./utils/variebles";
+@import "./utils/mixins";
+@import "./utils/reset.scss";
 
-body {
-  background: $c-gray;
-}
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/top-bar";
+@import "blocks/icon";
+@import "blocks/menu";
+@import "blocks/nav";
+@import "blocks/sections";
+@import "blocks/card";
+@import "blocks/buttons";
+@import "blocks/form-contact";
+@import "blocks/contact";
+@import "blocks/footer";

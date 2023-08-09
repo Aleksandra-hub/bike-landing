@@ -1,0 +1,22 @@
+.contact {
+  width: 170px;
+  margin-bottom: 120px;
+
+  &__content {
+    margin-bottom: 24px;
+    width: max-content;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+
+  &__subtitle_link {
+    text-decoration: none;
+    color: #fff;
+
+    @include hover (color, $hover-contact-color);
+  }
+}
