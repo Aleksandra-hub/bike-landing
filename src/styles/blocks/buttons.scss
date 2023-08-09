@@ -28,7 +28,7 @@
     @include onTablet {
       width: 392px;
     }
-    @include onLaptop {
+    @include onDesktop {
       width: 324px;
     }
   }
