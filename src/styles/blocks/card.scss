@@ -4,7 +4,7 @@
   flex-direction: column;
   box-sizing: border-box;
 
-  &-hover {
+  &__picture {
     @include hover(transform, scale(1.1));
 
   }

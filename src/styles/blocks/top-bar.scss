@@ -24,8 +24,14 @@
     @include hover(transform, scale(1.2));
   }
 
-  &__icons {
+  &__icon {
     display: flex;
     gap: 24px;
+  }
+
+  &--menu {
+    z-index: 1;
+    background-color: #e5e5e5;
+    margin-bottom: 15px ;
   }
 }

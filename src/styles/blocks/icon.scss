@@ -3,7 +3,7 @@
 
   @include hover (transform, scale(1.2));
 
-  &--img {
+  &__img {
     display: flex;
     height: 24px;
     width: 24px;
@@ -14,22 +14,22 @@
     }
   }
 
-  &--content {
+  &-content {
     display: flex;
     align-items: center;
     gap: 24px;
   }
 
-  &--phone--number {
+  &-phone-number {
     display: none;
   }
 
-  &--content:hover &--phone--number {
+  &-content:hover &-phone-number {
     display: block;
     transform: scale(1.2);
   }
 
-  &--menu:hover .icon--img__menu {
+  &--menu:hover .icon__img--menu {
     visibility: hidden;
   }
 
