@@ -45,11 +45,10 @@
     &--about-us {
 
       @include onTablet {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 24px;
-      align-items: first baseline;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+        align-items: first baseline;
       }
-
     }
 
     &--compare-bikes {
@@ -64,31 +63,14 @@
       }
     }
 
-    //   @include onDesktop {
-    //     display: flex;
-    //     gap: 24px;
-    //   }
-    // }
+    &--contact {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+      margin-inline: auto;
 
-    // &--details {
-    //   margin: 0 auto;
-    // }
-
-    // &--contact {
-    //   max-width: 1020px;
-    //   margin: 0 auto ;
-    //   padding-left: 0;
-
-    //   @include onTablet {
-    //     display: flex;
-    //     gap: 24px;
-    //     padding-right: 20px;
-    //   }
-
-    //   @include onDesktop {
-    //     gap: 198px;
-    //     padding-right: 180px;
-    //   }
-    // }
+      @include onDesktop {
+        column-gap: 198px;
+      }
+    }
   }
 }

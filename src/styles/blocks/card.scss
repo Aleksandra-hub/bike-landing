@@ -1,8 +1,7 @@
 .card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
   box-sizing: border-box;
+  margin-inline: auto;
 
   &__picture {
     @include hover(transform, scale(1.1));
