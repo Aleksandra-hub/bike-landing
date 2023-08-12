@@ -25,9 +25,6 @@
       font-size: 64px;
     }
 
-    &--about-us {
-      justify-content: flex-start;
-    }
   }
 
   &__text {
@@ -39,7 +36,10 @@
   &__content {
     display: grid;
     row-gap: 40px;
-
+    max-width: 1020px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: content-box;
     @include contentPaddingInline ;
 
     &--about-us {
@@ -53,20 +53,26 @@
 
     &--compare-bikes {
 
+      @include onTablet {
+        padding-inline: 176px;
+      }
+
       @include onDesktop {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 24px;
       }
 
-      @include onTablet {
-        padding-inline: 176px;
-      }
     }
 
     &--contact {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 24px;
+      gap: 0;
       margin-inline: auto;
+      justify-content: center;
+
+      @include onTablet {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+      }
 
       @include onDesktop {
         column-gap: 198px;

@@ -1,5 +1,6 @@
 .icon {
   display: flex;
+  align-items: center;
 
   @include hover (transform, scale(1.2));
 
