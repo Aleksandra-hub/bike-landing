@@ -1,11 +1,31 @@
 .section {
-  display: grid;
-  row-gap: 48px;
+
+  &__content {
+    @include grid-section ;
+
+    row-gap: 40px;
+    box-sizing: content-box;
+
+    @include contentPaddingInline;
+
+  }
+
+  &__content-item {
+    grid-column: 1/-1;
+
+    &--compare-bikes {
+
+      grid-template-rows: repeat(2, fr);
+
+      @include onDesktop {
+        grid-column: span 4;
+      }
+    }
+  }
 
   &__title {
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
+    grid-column: 1/-1;
+    margin: auto ;
 
     @include sectionTitleMarginTop ;
 
@@ -14,68 +34,34 @@
     line-height: 32px;
     letter-spacing: -1.5px;
 
+   &--about-us {
     @include onTablet {
       font-size: 48px;
+      grid-column: 1/4;
+
     }
 
     @include onDesktop {
-      margin-bottom: 56px;
       font-size: 64px;
+      grid-column: 1/6;
     }
+   }
 
   }
 
   &__text {
+    grid-column: 1/-1;
     font-weight: 500;
     font-size: 23px;
     line-height: 32px;
-  }
-
-  &__content {
-    display: grid;
-    row-gap: 40px;
-    max-width: 1020px;
-    min-width: 320px;
-    margin: 0 auto;
-    box-sizing: content-box;
-    @include contentPaddingInline ;
 
     @include onTablet {
-      box-sizing: border-box;
+      grid-column: 4/-1;
+      margin-top: 120px;
     }
 
-    &--about-us {
-      @include onTablet {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 24px;
-        align-items: first baseline;
-      }
-    }
-
-    &--compare-bikes {
-      @include onTablet {
-        padding-inline: 176px;
-      }
-
-      @include onDesktop {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 24px;
-      }
-    }
-
-    &--contact {
-      gap: 0;
-      margin-inline: auto;
-      justify-content: center;
-
-      @include onTablet {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 24px;
-      }
-
-      @include onDesktop {
-        column-gap: 198px;
-      }
+    @include onDesktop {
+      grid-column: 6/-1;
     }
   }
 }
