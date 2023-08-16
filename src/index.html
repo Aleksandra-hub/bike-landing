@@ -21,10 +21,10 @@
           <img src="images/MyBiKE-header.svg" alt="MyBike logo">
         </a>
 
-        <div class="top-bar__icons">
-          <div class="icon--content">
+        <div class="top-bar__icon">
+          <div class="icon-content">
             <img
-            class="icon--phone--number"
+            class="icon-phone-number"
             src="./images/icons/Phone-number.svg"
             alt="+12345555555"
             >
@@ -33,7 +33,7 @@
                href="tel:+1 234 5555-55-55"
                class="icon icon--phone">
               <img
-                class="icon--img icon--img__phone"
+                class="icon__img icon__img--phone"
                 src="./images/icons/Icon-Phone-call.svg"
                 alt="phone"
               >
@@ -42,7 +42,7 @@
 
           <a href="#menu" class="icon icon--menu">
             <img
-              class="icon--img icon--img__menu"
+              class="icon__img icon__img--menu"
               src="./images/icons/Icon-Burger-menu.svg"
               alt="menu"
             >
@@ -56,14 +56,14 @@
     </header>
 
     <aside class="menu page__menu" id="menu">
-      <div class="top-bar menu__top">
+      <div class="top-bar top-bar--menu">
         <a href="#" class="top-bar__logo">
           <img src="./images/MyBiKE-menu.svg" alt="MyBike logo">
         </a>
 
-        <div class="header__icons">
+        <div class="top-bar__icon">
           <a href="#" class="icon icon--close">
-            <img class="icon--img"
+            <img class="icon__img"
              src="./images/icons/Icon-Close.svg"
              alt="cross"
             >
@@ -106,7 +106,7 @@
       </div>
     </aside>
 
-    <main>
+    <main class="main-section" >
       <section class="section section--about-us" id="about-us">
         <div class="section__content section__content--about-us">
           <h2 class="section__title section__title--about-us">Move free</h2>
@@ -118,12 +118,13 @@
       </section>
 
       <section class="section section--compare-bikes" id="compare-bikes">
-        <h2 class="section__title">Compare bikes</h2>
 
         <div class="section__content section__content--compare-bikes">
-          <div class="card card--compare-bikes">
-            <picture class="card-hover">
-              <source media="(min-width:576px )" srcset="./images/bikes/sporty-4-tablet.png">
+          <h2 class="section__title">Compare bikes</h2>
+
+          <article class="card section__content-item section__content-item--compare-bikes">
+            <picture class="card__picture">
+              <source media="(min-width:576px)" srcset="./images/bikes/sporty-4-tablet.png">
               <img
                 class="card__img"
                 src="./images/bikes/sporty-4-mobile.png"
@@ -142,10 +143,10 @@
             <div class="card__price">
               $ 2 590
             </div>
-          </div>
+          </article>
 
-          <div class="card card--compare-bikes">
-            <picture class="card-hover">
+          <article class="card section__content-item section__content-item--compare-bikes">
+            <picture class="card__picture">
               <source media="(min-width:576px )" srcset="./images/bikes/Ride-ST-tablet.png">
 
               <img
@@ -166,10 +167,10 @@
             <div class="card__price">
               $ 2 590
             </div>
-          </div>
+          </article>
 
-          <div class="card card--compare-bikes">
-            <picture class="card-hover">
+          <article class="card section__content-item section__content-item--compare-bikes">
+            <picture class="card__picture">
               <source media="(min-width:576px )" srcset="./images/bikes/Agile-3-tablet.png">
 
               <img
@@ -189,17 +190,17 @@
             <div class="card__price">
               $ 2 090
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
       <section class="section section--details" id="details">
-        <h2 class="section__title section__title--details">The Details</h2>
-
         <div class="section__content section__content--details">
-          <div class="card card--details">
+          <h2 class="section__title section__title--details">The Details</h2>
+
+          <article class="card section__content-item section__content-item--details">
             <div class="card__img-content">
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-1-laptop.png">
                 <source media="(min-width: 576px )" srcset="./images/details/image-1-tablet.png">
 
@@ -209,7 +210,7 @@
                   alt="bikes speedwatch">
               </picture>
 
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-2-laptop.png">
                 <source media="(min-width:576px)" srcset="./images/details/image-2-tablet.png">
 
@@ -227,11 +228,11 @@
             <div class="card__subtitle card__subtitle--details">
               The app senses when you're nearby to unlock automatically. GPS tracking so you know where your bike is and can track it anytime.
             </div>
-          </div>
+          </article>
 
-          <div class="card card--details">
+          <article class="card section__content-item section__content-item--details">
             <div class="card__img-content">
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-3-laptop.png">
                 <source media="(min-width:576px)" srcset="./images/details/image-3-tablet.png">
 
@@ -241,7 +242,7 @@
                   alt="bikes">
               </picture>
 
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-4-laptop.png">
                 <source media="(min-width:576px )" srcset="./images/details/image-4-tablet.png">
 
@@ -260,11 +261,11 @@
             <div class="card__subtitle card__subtitle--details">
               The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.
             </div>
-          </div>
+          </article>
 
-          <div class="card card--details">
+          <article class="card section__content-item section__content-item--details">
             <div class="card__img-content">
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-5-laptop.png">
                 <source media="(min-width:576px )" srcset="./images/details/image-5-tablet.png">
 
@@ -275,7 +276,7 @@
 
               </picture>
 
-              <picture class="card-hover">
+              <picture class="card__picture">
                 <source media="(min-width: 1024px )" srcset="./images/details/image-6-laptop.png">
                 <source media="(min-width:576px )" srcset="./images/details/image-6-tablet.png">
 
@@ -293,9 +294,9 @@
             <div class="card__subtitle card__subtitle--details">
               Brakes with total stopping power the second you make contact. The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.
             </div>
-          </div>
+          </article>
 
-          <a href="#" class="button button--explore">
+          <a href="#" class="button button--explore section__content-item">
             Explore
           </a>
         </div>
@@ -303,14 +304,15 @@
       </section>
 
       <section class="section section--contact-us" id="contacts">
-        <h2 class="section__title section__title--contact-us">Contact us</h2>
 
         <div class="section__content section__content--contact">
+          <h2 class="section__title section__title--contact-us">Contact us</h2>
+
           <form
           action="#"
           method="post"
           onsubmit="this.reset(); return false;"
-          class="form-contact form-contact--margin"
+          class="form-contact form-contact--margin section__content-item section__content-item--form"
         >
             <input
               class="form-contact__item"
@@ -329,7 +331,7 @@
             >
 
             <textarea
-              class="form-contact__item form-contact__texarea"
+              class="form-contact__item form-contact__item--texarea"
               name="message"
               id="message"
               cols="30"
@@ -341,7 +343,7 @@
             <button class="button button--send">Send</button>
           </form>
 
-          <div class="contact">
+          <div class="contact section__content-item section__content-item--contact">
             <div class="contact__content">
               <div class="contact__title">Phone</div>
 

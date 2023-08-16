@@ -2,15 +2,6 @@
 @import "./utils/mixins";
 @import "./utils/reset.scss";
 
-@import "blocks/page";
-@import "blocks/header";
-@import "blocks/top-bar";
-@import "blocks/icon";
-@import "blocks/menu";
-@import "blocks/nav";
-@import "blocks/sections";
-@import "blocks/card";
-@import "blocks/buttons";
-@import "blocks/form-contact";
-@import "blocks/contact";
-@import "blocks/footer";
+body {
+  background: $c-gray;
+}

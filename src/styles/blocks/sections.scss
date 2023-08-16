@@ -1,16 +1,55 @@
 .section {
-  box-sizing: border-box;
-  background-color: $menu-text-color;
+  &__content {
+    @include grid-section ;
 
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+    row-gap: 40px;
+    box-sizing: content-box;
+
+    @include contentPaddingInline;
+  }
+
+  &__content-item {
+    grid-column: 1/-1;
+    margin: auto;
+
+    &--compare-bikes {
+      @include onDesktop {
+        grid-column: span 4;
+      }
+    }
+
+    &--form {
+      @include onTablet {
+        grid-column: 1/4;
+      }
+
+      @include onDesktop {
+        grid-column: 1/6;
+      }
+    }
+
+    &--contact {
+      @include onTablet {
+        grid-column: 4/6;
+      }
+
+      @include onDesktop {
+        grid-column: 8/11;
+      }
+    }
+  }
 
   &__title {
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    margin-bottom: 48px;
+    grid-column: 1/-1;
+    margin: auto ;
+
+    @include onTablet {
+      font-size: 48px;
+    }
+
+    @include onDesktop {
+      font-size: 64px;
+    }
 
     @include sectionTitleMarginTop ;
 
@@ -19,74 +58,30 @@
     line-height: 32px;
     letter-spacing: -1.5px;
 
-    @include onTablet {
-      font-size: 48px;
-    }
-
-    @include onLaptop {
-      margin-bottom: 56px;
-      font-size: 64px;
-    }
-
     &--about-us {
-      justify-content: flex-start;
+      @include onTablet {
+        grid-column: 1/4;
+      }
+
+      @include onDesktop {
+        grid-column: 1/6;
+      }
     }
   }
 
   &__text {
+    grid-column: 1/-1;
     font-weight: 500;
     font-size: 23px;
     line-height: 32px;
-  }
 
-  &__content {
-
-    @include contentPaddingInline ;
-
-    &--about-us {
-
-      @include onTablet {
-        display: flex;
-        gap: 70px;
-        align-items: first baseline;
-      }
-
-      @include onLaptop {
-        padding-inline: 207px;
-      }
+    @include onTablet {
+      grid-column: 4/-1;
+      margin-top: 120px;
     }
 
-    &--compare-bikes {
-
-      @include onTablet {
-        padding-inline: 176px;
-      }
-
-      @include onLaptop {
-        display: flex;
-        gap: 24px;
-      }
-    }
-
-    &--details {
-      margin: 0 auto;
-    }
-
-    &--contact {
-      max-width: 1020px;
-      margin: 0 auto ;
-      padding-left: 0;
-
-      @include onTablet {
-        display: flex;
-        gap: 24px;
-        padding-right: 20px;
-      }
-
-      @include onLaptop {
-        gap: 198px;
-        padding-right: 180px;
-      }
+    @include onDesktop {
+      grid-column: 6/-1;
     }
   }
 }

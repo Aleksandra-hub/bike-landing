@@ -10,7 +10,7 @@
     width: 288px;
   }
 
-  @include onLaptop {
+  @include onDesktop {
     width: 411px;
   }
 
@@ -25,12 +25,12 @@
     height: 48px;
     padding: 14px 16px;
     box-sizing: border-box;
-  }
 
-  &__texarea {
-    max-width: 100%;
-    height: 148px;
-    resize: none;
+    &--texarea {
+      max-width: 100%;
+      height: 148px;
+      resize: none;
+    }
   }
 
   ::placeholder {

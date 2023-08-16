@@ -2,7 +2,7 @@
   box-sizing: border-box;
   height: 100vh;
   background-image: url(../images/header-bg-mobile.png);
-  background-position: right;
+  background-position: center;
   background-size: cover;
 
   display: flex;
@@ -13,7 +13,7 @@
     background-image: url(../images/header-bg-tablet.png);
   }
 
-  @include onLaptop {
+  @include onDesktop {
     background-image: url(../images/header-bg-laptop.png);
   }
 
@@ -27,7 +27,7 @@
     @include onTablet {
       margin-bottom: 130px;
     }
-    @include onLaptop {
+    @include onDesktop {
       margin-bottom: 204px;
     }
   }
@@ -39,11 +39,12 @@
     font-size: 36px;
     line-height: 100%;
     letter-spacing: -1.5px;
+    text-align: center;
 
     @include onTablet {
       font-size: 64px;
     }
-    @include onLaptop {
+    @include onDesktop {
       font-size: 80px;
     }
   }

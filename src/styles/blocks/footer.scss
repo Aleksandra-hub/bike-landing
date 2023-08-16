@@ -11,7 +11,7 @@
     background-image: url(../images/footer-bg-tablet.png);
   }
 
-  @include onLaptop {
+  @include onDesktop {
     background-image: url(../images/footer-bg-laptop.png);
   }
 }

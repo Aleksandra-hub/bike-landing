@@ -1,14 +1,20 @@
 .top-bar {
-  padding-block: 29px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 24px;
+  box-sizing: content-box;
 
   @include contentPaddingInline;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   @include onTablet {
     padding-block: 34px;
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 22px;
+    max-width: 1020px;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -24,8 +30,16 @@
     @include hover(transform, scale(1.2));
   }
 
-  &__icons {
+  &__icon {
+    grid-column: -2/-1;
+    justify-self: end;
     display: flex;
     gap: 24px;
+  }
+
+  &--menu {
+    z-index: 1;
+    background-color: #e5e5e5;
+    margin-bottom: 15px ;
   }
 }

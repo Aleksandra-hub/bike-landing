@@ -1,28 +1,15 @@
 .card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
   box-sizing: border-box;
+  margin-inline: auto;
 
-  &-hover {
+  &__picture {
+
     @include hover(transform, scale(1.1));
-
-  }
-
-  &--details {
-    width: fit-content;
-  }
-
-  &__img-content {
-    display: flex;
-    gap: 20px;
-    width: fit-content;
   }
 
   &__img {
-    box-sizing: border-box;
     width: 100%;
-
   }
 
   &__title {
@@ -37,7 +24,7 @@
       @include onTablet {
         max-width: 596px;
       }
-      @include onLaptop {
+      @include onDesktop {
         max-width: 672px;
       }
     }
@@ -53,7 +40,7 @@
       @include onTablet {
         max-width: 596px;
       }
-      @include onLaptop {
+      @include onDesktop {
         max-width: 672px;
       }
     }
@@ -65,4 +52,9 @@
     font-weight: 700;
   }
 
+  &__img-content {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+  }
 }
