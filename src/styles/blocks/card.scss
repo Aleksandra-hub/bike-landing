@@ -4,7 +4,6 @@
   margin-inline: auto;
 
   &__picture {
-
     @include hover(transform, scale(1.1));
   }
 

@@ -2,7 +2,6 @@
   &__content {
     @include grid-section ;
 
-
     row-gap: 40px;
     box-sizing: content-box;
 
@@ -61,7 +60,7 @@
 
     &--about-us {
       margin-left: 0;
-      
+
       @include onTablet {
         grid-column: 1/4;
       }
