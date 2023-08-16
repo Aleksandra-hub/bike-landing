@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 24px;
-
+  box-sizing: content-box;
+  
   @include contentPaddingInline;
 
   @include onTablet {
@@ -10,8 +11,10 @@
   }
 
   @include onDesktop {
-    grid-template-columns: 0.7fr minmax(500px,512px) minmax(500px,512px)  0.7fr;
-    padding-inline: 0;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 22px;
+    max-width: 1020px;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -24,14 +27,11 @@
       height: 56px;
     }
 
-    @include onDesktop {
-      grid-column: 2/3;
-    }
-
     @include hover(transform, scale(1.2));
   }
 
   &__icon {
+    grid-column: -2/-1;
     justify-self: end;
     display: flex;
     gap: 24px;

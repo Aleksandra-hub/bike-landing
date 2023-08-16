@@ -54,6 +54,8 @@
 
   @include onDesktop {
     --columns: 12;
+    max-width: 1020px;
+    margin: auto;
   }
 
 }
