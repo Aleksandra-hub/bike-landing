@@ -39,4 +39,10 @@
     color: $placeholder-color;
     letter-spacing: 1px;
   }
+  
+  &:hover {
+    ::placeholder {
+      color: #292929;
+    }
+  }
 }
